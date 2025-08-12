@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+
+int bsearch(int arr[],int n,int element){
+    int low=0,high=n-1;
+
+    while (low<=high){
+        int mid = low +(high-low)/2;
+        if(arr[mid]==element){
+            return mid;
+        }
+        else if (arr[mid]<element)
+        {
+            low=mid+1;
+        }
+        else{
+            high=mid-1;
+        }
+    }
+    return -1;
+}
+
+int main(){
+    int n,element;
+    cout<<"Enter number of elements:";
+    cin>>n;
+
+    int arr[n];
+    cout<<"Enter element in sorted order: ";
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+
+    cout<<"Enter Element to search: ";
+    cin>>element;
+
+    int result=bsearch(arr,n,element);
+
+    if(result !=-1)
+        cout<<"Elements found at index:"<<result;
+    else
+        cout<<"Element not found";
+        
+
+    return 0;
+}
