@@ -1,3 +1,4 @@
+//Binary search
 #include<iostream>
 #include <vector>
 using namespace std;
@@ -26,4 +27,5 @@ int main(){
         }
         cout<<"The missing elements is: "<<missing<<endl;
     return 0;
+
     }
