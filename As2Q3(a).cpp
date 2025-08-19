@@ -1,3 +1,4 @@
+//Linear seach 
 #include<iostream>
 using namespace std;
 
@@ -16,4 +17,5 @@ int main(){
             break;
         }
     }
+
 }
